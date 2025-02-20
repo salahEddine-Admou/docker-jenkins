@@ -1,4 +1,4 @@
 def hello(){
-  echo 'hellooo'
+  echo 'hellooo salahhhhh'
 }
 return this
