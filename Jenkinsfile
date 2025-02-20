@@ -6,7 +6,6 @@ agent any
   }
 stages{
 stage("build"){
-steps{
   when{
     expression{
       params.execute == true
@@ -15,7 +14,7 @@ steps{
   steps{
     ech "hellooo ${params.VERSION}"
   }
-}
+
 }
 stage("test"){
 steps{
