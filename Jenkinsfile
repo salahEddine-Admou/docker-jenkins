@@ -21,6 +21,7 @@ stage("test"){
 steps{
   script{
     gv = load "script.groovy"
+    gv.hello()
   }
 }
 }
