@@ -12,7 +12,7 @@ stage("build"){
     }
   }
   steps{
-    ech "hellooo ${params.VERSION}"
+    echo "hellooo ${params.VERSION}"
   }
 
 }
