@@ -18,7 +18,6 @@ stage("build"){
 
 }
 stage("test"){
-steps{
   input{
     message "select the env"
     ok "done"
@@ -26,9 +25,11 @@ steps{
       choice(name:'ENV',choices:['dev','prod'],description:'env of deployment')
     }
   }
+steps{
   script{
     gv = load "script.groovy"
     gv.hello()
+    echo "deploying to ${ENV}"
   }
 }
 }
@@ -36,7 +37,7 @@ stage("deploy"){
 steps{
   script{
     gv.hello()
-    echo "deploying to ${ENV}"
+   
   }
 }
 }
